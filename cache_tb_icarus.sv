@@ -5,6 +5,12 @@ module cache_tb;
     reg  [31:0] address, write_data;
     wire [31:0] read_data;
     wire        hit;
+    // --- VCD waveform dump for CI/docs ---
+    initial begin
+        $dumpfile("cache.vcd");
+        $dumpvars(0, cache_tb);
+    end
+
 
     cache dut (
         .clk(clk),
