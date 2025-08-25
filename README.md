@@ -139,6 +139,10 @@ License
 
 MIT (see LICENSE if present).
 
+## Results
+The GitHub Actions workflow compiles and runs the self-checking testbench on every push.
+- See the latest run under **Actions → sim** for the console log (hit/miss prints and final **STATS** line).
+- CI also produces a `cache.vcd` waveform you can download from the run’s **Artifacts**.
 
 
 
