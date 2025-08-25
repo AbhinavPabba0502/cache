@@ -15,7 +15,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y iverilog
 
       - name: Build
-        run: iverilog -g2012 -o cache_tb.vvp cache.sv cache_tb.sv
+        run: iverilog -g2012 -o cache_tb.vvp cache_icarus.sv cache_tb_icarus.sv
 
       - name: Run
         run: vvp cache_tb.vvp
+
