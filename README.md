@@ -1,6 +1,7 @@
 \# 2-Way Set-Associative Cache (SystemVerilog)
 
 
+[![Build](https://github.com/AbhinavPabba0502/cache/actions/workflows/sim.yml/badge.svg)](https://github.com/AbhinavPabba0502/cache/actions/workflows/sim.yml)
 
 A compact \*\*2-way set-associative\*\* cache with \*\*LRU\*\* replacement and a self-checking testbench.
 
