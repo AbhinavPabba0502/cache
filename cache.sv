@@ -33,7 +33,7 @@ module cache (
     logic                lru         [0:NSETS-1];
 
     // Internal signals
-    logic [0:0] chosen_way;
+    logic chosen_way;
     logic w0_hit, w1_hit;
     logic [31:0] data_out;
 
