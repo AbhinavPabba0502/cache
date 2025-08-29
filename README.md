@@ -1,21 +1,21 @@
-\# 2-Way Set-Associative Cache (SystemVerilog)
+ 2-Way Set-Associative Cache (SystemVerilog)
 
 
 [![Build](https://github.com/AbhinavPabba0502/cache/actions/workflows/sim.yml/badge.svg)](https://github.com/AbhinavPabba0502/cache/actions/workflows/sim.yml)
 
-A compact \*\*2-way set-associative\*\* cache with \*\*LRU\*\* replacement and a self-checking testbench.
+A compact 2-way set-associative cache with LRU replacement and a self-checking testbench.
 
 
 
-\## Features
+Features
 
 \- 2 ways × 16 sets (configurable in RTL)
 
 \- 32-bit data (1 word per line for simplicity)
 
-\- \*\*LRU\*\* bit per set to choose eviction on misses
+\- LRU bit per set to choose eviction on misses
 
-\- \*\*Write-allocate\*\* on write miss
+\- Write-allocate on write miss
 
 \- Combinational `hit` detection, registered `read\_data`
 
@@ -23,9 +23,9 @@ A compact \*\*2-way set-associative\*\* cache with \*\*LRU\*\* replacement and a
 
 
 
-\## Design Overview
+Design Overview
 
-\*\*Address split (32-bit):\*\*
+Address split (32-bit):
 
 \[tag | index(4) | offset(2)]
 
@@ -39,13 +39,13 @@ A compact \*\*2-way set-associative\*\* cache with \*\*LRU\*\* replacement and a
 
 
 
-\*\*Hit path:\*\* compare tag in both ways → select data  
+Hit path: compare tag in both ways → select data  
 
-\*\*Miss path:\*\* use empty way if available else evict LRU; write-allocate on writes
+Miss path: use empty way if available else evict LRU; write-allocate on writes
 
 
 
-\## File List
+File List
 
 \- `cache.sv` — RTL (2-way SA cache)
 
@@ -53,11 +53,11 @@ A compact \*\*2-way set-associative\*\* cache with \*\*LRU\*\* replacement and a
 
 
 
-\## How to Run
+How to Run
 
 
 
-\### Icarus Verilog (open-source)
+Icarus Verilog (open-source)
 
 ```bash
 
@@ -139,10 +139,10 @@ License
 
 MIT (see LICENSE if present).
 
-## Results
+ Results
 The GitHub Actions workflow compiles and runs the self-checking testbench on every push.
-- See the latest run under **Actions → sim** for the console log (hit/miss prints and final **STATS** line).
-- CI also produces a `cache.vcd` waveform you can download from the run’s **Artifacts**.
+- See the latest run under Actions → sim for the console log (hit/miss prints and final STATS line).
+- CI also produces a `cache.vcd` waveform you can download from the run’s Artifacts.
 
 
 
